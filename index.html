@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.typekit.net/zgx3jik.css">
+    <script type="text/javascript" src="https://appleid.cdn-apple.com/appleauth/static/jsapi/appleid/1/en_US/appleid.auth.js"></script>
+
+
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Lilita+One&family=Montserrat:wght@500&family=Poppins:wght@400;500&family=Source+Sans+3&display=swap');
+    
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Source Sans 3', sans-serif;
+            
+        }
+
+        .main{
+            width: 100vw;
+            height: 100vh;  
+        }
+        .logo{
+            width: 100vw;
+            height: 90px;
+            padding: 1.75vw 3vw;
+        }
+        
+        .logo img{
+            height: 1.4vw;
+        }
+        .card{
+            width: 23vw;
+            height: 30vw;
+            margin: auto;
+            margin-top: 5vw;
+            box-shadow: 0px 0px 10px 10px #F0F0F0;
+            
+
+        }
+        .form-content{
+            display: flex;
+            flex-direction: column;
+            padding: 1.5vw 1.5vw;
+        }
+        .form-content h1{
+            font-size: 1.75vw;
+            padding-bottom: 0.5vw;
+        }
+        .form-content input{
+            width: 100%;
+            height: 2.8vw;
+            border: none;
+            padding: 0vw 0.5vw;
+            font-size: 1vw;
+            border: 1px solid #1F1F1F;
+            border-radius: 5px;
+        }
+        .form-content input[type="text"]{
+            margin-bottom: 1.1vw;
+            margin-top: 1.3vw;
+        }
+        .form-content input[type="password"]{
+            margin-bottom: 1.1vw;
+            margin-top: 0.1vw;
+        }
+        .form-content a{
+            color: #0275d8;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        #btn{
+            background-color: #0275d8;
+            color: white;
+            height: 2.75vw;
+            width: 100%;
+            border-radius: 35px;
+            border: none;
+            font-size: 0.9vw;
+            font-weight: 500;
+             margin: 1.2vw 0vw; 
+        }
+        #btn2{
+            color: rgb(63, 62, 62);
+            background-color: white;
+            height: 2vw;
+            width: 100%;
+            border-radius: 35px;
+            border: none;
+            font-size: 0.9vw;
+            font-weight: 500;
+             margin: 1vw 0vw 0vw 0vw; 
+             border: 1px solid black;
+        }
+        #btn3{
+            height: 2vw;
+            width: 100%;
+            border-radius: 35px;
+            border: none;
+            font-size: 0.9vw;
+            font-weight: 500;
+            background-color: white;
+        }
+        .line{
+            display: flex;
+            padding-top: 0.25vw;
+            color: #8d8a8a;
+        }
+        .line span:nth-child(2){
+            position: relative;
+            top: -10px;
+            padding: 0vw 0.5vw;
+        }
+        .line1,.line2{
+            width: 50%;
+            height: 1.5px;
+            background-color: #D9D9D9;
+        }
+        .signin-button {
+            width: 210px;
+            height: 40px;
+        }
+        .down{
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            margin-top: -130px;
+        }
+        #out{
+            color: black;
+            font-size: 0.9vw;
+            margin: auto;
+            
+        }
+        .down span{
+            color: #0275d8;
+            font-weight: 600;
+        }
+        #appleid-signin {
+  vertical-align: middle; /* Adjust the alignment as needed */
+}
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+
+        <div class="logo">
+            <img src="/LinkedIn_Logo_2019.png" alt="logo" >
+        </div>
+            <div class="card">
+                <div class="form-content">
+                    <h1>Sign in</h1>
+                    <p>Stay updated on your professional world</p>
+                    <input type="text" name="email" placeholder="Email or Phone">
+                    <input type="password" name="pass" placeholder="Password">
+                    <a href="#">Forgot Password?</a>
+                    <Button id="btn">Sign In</Button>
+                    <div class="line">
+                        <span class="line1"></span>
+                        <span>or</span>
+                        <span class="line2"></span>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                          <Button id="btn2"><a class="btn btn-lg btn-google btn-block text-uppercase btn-outline" href="#" style="color: #918888;"><img src="https://img.icons8.com/color/16/000000/google-logo.png"> Signup Using Google</a></Button>
+
+                        </div>
+                        <button id = "btn2" class="sign-in-with-apple-button" type="button" aria-label="Sign in with Apple"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" fill="transparent"></rect><path d="M17.569 12.6254C17.597 15.652 20.2179 16.6592 20.247 16.672C20.2248 16.743 19.8282 18.1073 18.8662 19.5166C18.0345 20.735 17.1714 21.9488 15.8117 21.974C14.4756 21.9986 14.046 21.1799 12.5185 21.1799C10.9915 21.1799 10.5142 21.9489 9.2495 21.9987C7.93704 22.0485 6.93758 20.6812 6.09906 19.4673C4.38557 16.9842 3.0761 12.4508 4.83438 9.39061C5.70786 7.87092 7.26882 6.90859 8.96311 6.88391C10.2519 6.85927 11.4683 7.753 12.2562 7.753C13.0436 7.753 14.5219 6.67821 16.0759 6.83605C16.7265 6.8632 18.5527 7.09947 19.7253 8.81993C19.6309 8.87864 17.5463 10.095 17.569 12.6254ZM15.058 5.1933C15.7548 4.34789 16.2238 3.171 16.0959 2C15.0915 2.04046 13.877 2.67085 13.1566 3.5158C12.5109 4.26404 11.9455 5.46164 12.0981 6.60946C13.2176 6.69628 14.3612 6.03925 15.058 5.1933Z" fill="black"></path></svg><span class="sign-in-with-apple-button__text" style="color: #5a5757;">Sign in with Apple</span></button>
+
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+           
+           
+        </div>
+        <div class="down">
+            <p id="out">New To LinkedIn? <span>Join Now</span></p>
+        </div>
+        
+        
+        
+        
+        
+        
+    </div>
+</body>
+</html>
+
